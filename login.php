@@ -46,13 +46,13 @@ $connect->close();
                 <div class="circle circle-one"></div>
                 <div class="form-container">
                     <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
-                    <h1 class="opacity">LOGIN</h1>
+                    <h1 class="Bold">LOGIN</h1>
                     <form action="" method="POST">
                         <!-- <input type="text" name="nama" placeholder="MASUKAN USERNAME" /> -->
                         <input type="text" name="nisn" placeholder="MASUKAN NISN" />
                         <input type="password" name="password" placeholder="MASUKAN PASSWORD" />
-                        <button type="submit" name="signIn" class="opacity">MASUK</button>
-                        <button onclick="window.location.href='index.php'" type="button">KEMBALI</button>
+                        <button type="submit" name="signIn" class="Bold">MASUK</button>
+                        <button onclick="window.location.href='index.php'" type="button">Back To Dashboard</button>
                     </form>
                     <div class="opacity" style="text-align: center;">
                         <p class="copyright_text">BELUM PUNYA AKUN ? <a href="register.php">REGISTER</a></p>

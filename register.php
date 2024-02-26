@@ -3,7 +3,9 @@ require "loginSystem/connect.php";
 if (isset($_POST["signUp"])) {
 
     if (signUp($_POST) > 0) {
-        echo '<script>alert("Sign Up berhasil!");window.location="login.php"</script>';
+        echo "<script>
+    alert('Sign Up berhasil!')
+    </script>";
     } else {
         echo "<script>
     alert('Sign Up gagal!')
@@ -30,7 +32,7 @@ if (isset($_POST["signUp"])) {
             <div class="circle circle-one"></div>
             <div class="form-container">
                 <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" style="width: 65%;" />
-                <h1 class="opacity">REGISTER</h1>
+                <h1 class="Bold">REGISTER</h1>
                 <form action="" method="POST">
                     <div style="display: flex; gap: 50px;">
                         <div>
@@ -44,10 +46,10 @@ if (isset($_POST["signUp"])) {
                             <input type="text" name="alamat" placeholder="Masukan Alamat" />
                         </div>
                     </div>
-                    <button class="opacity" name="signUp">SIGN UP</button>
+                    <button class="Bold" name="signUp">SIGN UP</button>
                 </form>
                 <div class="opacity">
-                    <p style="text-align:center;" class="copyright_text">SUDAH BUAT AKUN ? <a href="login.php"> MASUK</a></p>
+                    <p style="text-align:center;" class="copyright_text">SUDAH BUAT AKUN ? <a href="login.php">LOG IN</a></p>
                 </div>
             </div>
             <div class="circle circle-two"></div>

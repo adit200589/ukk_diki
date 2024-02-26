@@ -139,10 +139,11 @@ if (!isset($_SESSION['username'])) {
         <div class="container-fluid">
 
 
-          <div class="mt-2 alert alert-success" role="alert">Selamat Datang - <span class="fw-bold text-capitalize"><?php echo htmlentities($_SESSION["nama"]); ?></span> Sebagai <span class="fw-bold text-capitalize"><?php echo htmlentities($_SESSION["sebagai"]); ?></span></div>
-          <!-- Content Row -->
-          <div class="row">
-
+        <div class="alert alert-info ">
+                                    Selamat datang di<span><b> APLIKASI PERPUSTAKAAN MERDEKA</b></span> Anda bisa mengoperasikan sistem dengan wewenang sebagai <span class="text-uppercase"><b><?= $_SESSION['sebagai'] ?></b></span>.
+                                </div>
+                            </div>
+           
 
           </div>
           <!-- End of Content Wrapper -->

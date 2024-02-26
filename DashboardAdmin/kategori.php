@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Perpus</title>
+  <title>Perpus Merdeka</title>
   <link rel="icon" href="../images/perpus.png" type="png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
@@ -41,7 +41,7 @@ if (!isset($_SESSION['username'])) {
 
   <!-- Custom styles for this page -->
   <link href="../assets2/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <link rel="icon" type="png" href="../images/p.png">
+  <link rel="icon" type="png" href="../images/logo1.png">
 </head>
 
 <body id="page-top">
@@ -55,7 +55,7 @@ if (!isset($_SESSION['username'])) {
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="kategori.php">
-          <div class="sidebar-brand-text fas fa-book"> Perpus</div>
+          <div class="sidebar-brand-text fas fa-book">PM</div>
         </a>
 
         <!-- Divider -->
@@ -153,7 +153,7 @@ if (!isset($_SESSION['username'])) {
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="../assets/user.png" alt="memberLogo" width="40px">
+                <img src="../assets/adminLogo.png" alt="memberLogo" width="40px">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -175,7 +175,7 @@ if (!isset($_SESSION['username'])) {
 
           <!-- DataTales Example -->
 
-          <button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-success col-md-2"><span class="glyphicon glyphicon-plus"></span><i class="fas fa-plus mr-2"></i>Tmbh Kategori</button>
+          <button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-success col-md-2"><span class="glyphicon glyphicon-plus"></span><i class="fas fa-plus mr-2"></i>Add Category</button>
           <div class="card shadow mb-4">
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-success">Daftar Kategori</h6>

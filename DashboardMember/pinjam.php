@@ -8,7 +8,7 @@ session_start();
 //   exit();
 // }
 
-if (!isset($_SESSION['nisn'])) {
+if (!isset($_SESSION['nama'])) {
   header("Location: ../login.php");
   exit();
 }
@@ -57,16 +57,16 @@ if (isset($_POST["pinjam"])) {
   <link rel="stylesheet" href="css2/jquery.mCustomScrollbar.min.css">
   <!-- Tweaks for older IEs-->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="website icon" type="png" href="../images/p.png">
-  <title>Perpus</title>
+  <link rel="website icon" type="png" href="../images/logo1.png">
+  <title>Perpus Merdeka</title>
 </head>
 
 <body>
   <!-- Topbar -->
   <div class="header_section">
-    <div class="container-fluid">
-      <n class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#page"><img src="../images/logof.png"></a>
+    <div class="container-full">
+      <n class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#page"><img src="../images/logo2.png"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

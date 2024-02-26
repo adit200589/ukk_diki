@@ -27,7 +27,7 @@ if (!isset($_SESSION['username'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Perpus</title>
+  <title>Perpus Merdeka</title>
   <link rel="icon" href="../images/perpus.png" type="png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
@@ -36,7 +36,7 @@ if (!isset($_SESSION['username'])) {
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../assets2/css/sb-admin-2.min.css" rel="stylesheet">
-  <link rel="icon" type="png" href="../images/p.png">
+  <link rel="icon" type="png" href="../images/logo1.png">
 
 </head>
 
@@ -46,11 +46,11 @@ if (!isset($_SESSION['username'])) {
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-text fas fa-book"> Perpus</div>
+        <div class="sidebar-brand-text fas fa-book">PM</div>
       </a>
 
       <!-- Divider -->
@@ -140,7 +140,7 @@ if (!isset($_SESSION['username'])) {
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="../assets/user.png" alt="memberLogo" width="40px">
+                <img src="../assets/adminLogo.png" alt="memberLogo" width="40px">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -159,13 +159,10 @@ if (!isset($_SESSION['username'])) {
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
-
-          <div class="mt-2 alert alert-success" role="alert">Selamat Datang - <span class="fw-bold text-capitalize"><?php echo htmlentities($_SESSION["nama"]); ?></span> Sebagai <span class="fw-bold text-capitalize"><?php echo htmlentities($_SESSION["sebagai"]); ?></span> </div>
-          <!-- Content Row -->
-          <div class="row">
-
-
+              <div class="alert alert-info ">
+                 Selamat datang di<span><b> APLIKASI PERPUSTAKAAN MERDEKA</b></span> Anda bisa mengoperasikan sistem dengan wewenang sebagai <span class="text-uppercase"><b><?= $_SESSION['sebagai'] ?></b></span>.
+                </div>
+               </div>
           </div>
           <!-- End of Content Wrapper -->
 

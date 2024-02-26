@@ -12,9 +12,11 @@ if (isset($_SESSION['sebagai'])) {
   }
 }
 
+
 if (isset($_POST['btn-login'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
+
 
   // Query to check user credentials
   $query = "SELECT * FROM user WHERE username='$username' AND password='$password'";
@@ -54,13 +56,14 @@ if (isset($_POST['btn-login'])) {
 $connect->close();
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fapus</title>
+  <title>Perpus</title>
   <link rel="stylesheet" href="js_css/style2.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="icon" type="png" href="images/p.png">
@@ -83,7 +86,7 @@ $connect->close();
         <label>Password</label>
       </div>
       <button class="btn btn-primary" type="submit" name="btn-login">Masuk</button>
-      <button onclick="window.location.href='index.php'" class="btn btn-primary" type="button">Kembali Ke Hlmn Utama</button>
+      <button onclick="window.location.href='login.php'" class="btn btn-primary" type="button">Back To Login</button>
     </form>
   </div>
 

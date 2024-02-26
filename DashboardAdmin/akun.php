@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Perpus</title>
+  <title>Perpus Merdeka</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/de8de52639.js" crossorigin="anonymous"></script>
   <!-- Custom fonts for this template -->
@@ -43,7 +43,7 @@ if (!isset($_SESSION['username'])) {
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css'>
   <link rel="stylesheet" href="../assets/style3.css">
-  <link rel="icon" type="png" href="../images/p.png">
+  <link rel="icon" type="png" href="../images/logo1.png">
 
 </head>
 
@@ -58,7 +58,7 @@ if (!isset($_SESSION['username'])) {
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="akun.php">
-          <div class="sidebar-brand-text fas fa-book"> Perpus</div>
+          <div class="sidebar-brand-text fas fa-book">PM</div>
         </a>
 
         <!-- Divider -->
@@ -148,7 +148,7 @@ if (!isset($_SESSION['username'])) {
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="../assets/user.png" alt="memberLogo" width="40px">
+                <img src="../assets/adminLogo.png" alt="memberLogo" width="40px">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
