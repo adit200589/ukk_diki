@@ -76,7 +76,7 @@ WHERE peminjaman.nisn = '$nisn' and status = '3 '");
                 <!-- Topbar -->
                 <div class="header_section">
                     <div class="container-full">
-                        <n class="navbar navbar-expand-lg navbar-light bg-primary">
+                        <n class="navbar navbar-expand-lg navbar-light bg-warning">
                             <a class="navbar-brand" href="#page"><img src="../images/logo2.png"></a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>

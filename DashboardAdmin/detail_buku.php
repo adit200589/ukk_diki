@@ -52,7 +52,7 @@ $query = queryReadData("SELECT * FROM buku WHERE id_buku = '$idBuku'");
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
             <div class="sticky-top">
 
                 <!-- Sidebar - Brand -->

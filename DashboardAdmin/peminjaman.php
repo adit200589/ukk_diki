@@ -54,7 +54,7 @@ INNER JOIN user ON peminjaman.id_user = user.id");
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
       <div class="sticky-top">
 
         <!-- Sidebar - Brand -->

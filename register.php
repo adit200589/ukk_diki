@@ -23,19 +23,18 @@ if (isset($_POST["signUp"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Siswa</title>
     <link rel="stylesheet" href="js_css/style.css">
-    <link rel="website icon" type="png" href="images/p.png">
+    <link rel="website icon" type="png" href="images/logo1.png">
 </head>
 <style>
     body{
-        background-image: url(assets/th.jpg);
+        background-image: url(assets/wpbookstore.jpeg);
     }
     </style>
 <body>
     <section class="container">
         <div class="login-container" style="width: 35.2rem;">
-            <div class="circle circle-one"></div>
             <div class="form-container">
-                <h1 class="Bold">REGISTER</h1>
+                <h1 class="Bold">SILAHKAN REGISTRASI</h1>
                 <form action="" method="POST">
                     <div style="display: flex; gap: 50px;">
                         <div>
@@ -51,11 +50,11 @@ if (isset($_POST["signUp"])) {
                     </div>
                     <button class="Bold" name="signUp">SIGN UP</button>
                 </form>
-                <div class="opacity">
-                    <p style="text-align:center;" class="copyright_text">SUDAH BUAT AKUN ? <a href="login.php">LOG IN</a></p>
-                </div>
+                <center>
+                  <div>Sudah Buat Akun? <a href="login.php">Log In</a></div>
+                  <div>Jika Sudah Selesai Registrasi Silahkan <a href="login.php">( Go Back )</a></div>      
+                </center>
             </div>
-            <div class="circle circle-two"></div>
         </div>
         <div class="theme-btn-container"></div>
     </section>

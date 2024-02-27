@@ -34,11 +34,11 @@ $connect->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Siswa</title>
     <link rel="stylesheet" href="js_css/style.css">
-    <link rel="website icon" type="png" href="images/p.png">
+    <link rel="website icon" type="png" href="images/logo1.png">
 </head>
 <style>
     body{
-        background-image: url(assets/perpus.jpeg);
+        background-image: url(assets/wpbookstore.jpeg);
     }
     </style>
 <body>
@@ -47,26 +47,47 @@ $connect->close();
     <body>
         <section class="container">
             <div class="login-container">
-                <div class="circle circle-one"></div>
                 <div class="form-container">
-                    <h1 class="Bold">LOGIN</h1>
+                    <h1 class="Bold">SILAHKAN LOG IN</h1>
                     <form action="" method="POST">
                         <!-- <input type="text" name="nama" placeholder="MASUKAN USERNAME" /> -->
                         <input type="text" name="nisn" placeholder="MASUKAN NISN" />
                         <input type="password" name="password" placeholder="MASUKAN PASSWORD" />
-                        <button type="submit" name="signIn" class="Bold">MASUK</button>
+                        <button type="submit" name="signIn" class="Bold">Continue</button>
                         <button onclick="window.location.href='index.php'" type="button">Back To Dashboard</button>
                     </form>
-                    <div class="opacity" style="text-align: center;">
-                        <p class="copyright_text">BELUM PUNYA AKUN ? <a href="register.php">REGISTER</a></p>
-                        <p class="copyright_text">ANDA ADMIN ? <a href="admin.php">MASUK</a></p>
-                    </div>
+                <center>
+                  <div>Belum Punya Akun? <a href="register.php">Register</a></div>
+                  <div>Anda Admin <a href="admin.php">( Admin )</a></div>      
+                </center>
                 </div>
-                <div class="circle circle-two"></div>
             </div>
-            <div class="theme-btn-container"></div>
         </section>
-    </body>
+  <!-- partial -->
+    <script src="js_css/script.js"></script>
+
+      <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+      </script>
+
 
     <!-- partial -->
 

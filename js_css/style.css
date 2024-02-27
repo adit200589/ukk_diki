@@ -45,10 +45,10 @@ h1 {
 
 .login-container {
     position: relative;
-    width: 22.2rem;
+    width: 30.2rem;
 }
 .form-container {
-    border: 1px solid hsla(0, 0%, 65%, 0.158);
+    border: 1px solid hwb(138 4% 4% / 0.822);
     box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     backdrop-filter: blur(20px);
@@ -67,13 +67,12 @@ h1 {
     margin: 2rem 0;
     color: var(--color);
     outline: none;
-    background-color: #9191911f;
+    background-color: hsla(246, 89%, 89%, 0.89);
     border: none;
     border-radius: 5px;
     font-weight: 500;
     letter-spacing: 0.8px;
     font-size: 15px;
-    backdrop-filter: blur(15px);
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -81,7 +80,7 @@ h1 {
 }
 
 .login-container form input:focus {
-    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.863);
     animation: wobble 0.3s ease-in;
     -webkit-animation: wobble 0.3s ease-in;
 }

@@ -46,11 +46,11 @@ if (!isset($_SESSION['username'])) {
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-text fas fa-book">PM</div>
+        <div class="sidebar-brand-text fas fa-book">Perpus Merdeka</div>
       </a>
 
       <!-- Divider -->

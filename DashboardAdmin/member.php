@@ -49,12 +49,12 @@ if (!isset($_SESSION['username'])) {
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
       <div class="sticky-top">
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="member.php">
-          <div class="sidebar-brand-text fas fa-book">PM</div>
+          <div class="sidebar-brand-text fas fa-book"> Perpus Merdeka</div>
         </a>
 
         <!-- Divider -->
@@ -144,7 +144,7 @@ if (!isset($_SESSION['username'])) {
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="../assets/adminLogo.png" alt="memberLogo" width="40px">
+                <img src="../assets/user.png" alt="memberLogo" width="40px">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
@@ -320,6 +320,9 @@ if (!isset($_SESSION['username'])) {
                     // Hapus
                     if (isset($_POST['hapus'])) {
                       $nisn = $_POST['nisn'];
+
+                      $queryDeletePinjam = "DELETE FROM peminjaman WHERE nisn = '$nisn'";
+                      mysqli_query($connection, $queryDeletePinjam);
 
                       $delete = mysqli_query($connection, "delete from member where nisn='$nisn'");
                       if ($delete) {

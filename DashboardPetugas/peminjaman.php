@@ -76,7 +76,7 @@ if (mysqli_num_rows($sql) > 0) {
 
   <!-- Custom styles for this page -->
   <link href="../assets2/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-  <link rel="icon" href="../images/p.png" type="png">
+  <link rel="icon" href="../images/logo1.png" type="png">
 </head>
 
 <body id="page-top">
@@ -85,7 +85,7 @@ if (mysqli_num_rows($sql) > 0) {
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+    <ul class="navbar-nav bg-gradient-warning sidebar sidebar-dark accordion" id="accordionSidebar">
       <div class="sticky-top">
 
         <!-- Sidebar - Brand -->

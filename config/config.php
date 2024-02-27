@@ -297,15 +297,22 @@ function updateBuku($dataBuku)
   return mysqli_affected_rows($connection);
 }
 
-// Hapus member yang terdaftar
+// DELETE DATA Member
 function deleteMember($nisnMember)
 {
   global $connection;
 
-  $deleteMember = "DELETE FROM member WHERE nisn = $nisnMember";
-  mysqli_query($connection, $deleteMember);
+  $queryDeletePinjam = "DELETE FROM peminjaman WHERE nisn = '$nisnMember'
+  ";
+  mysqli_query($connection, $queryDeletePinjam);
+
+  $queryDeletemember = "DELETE FROM member WHERE nisn = '$nisnMember'
+  ";
+  mysqli_query($connection, $queryDeletemember);
+
   return mysqli_affected_rows($connection);
 }
+
 function deleteAdmin($id)
 {
   global $connection;
@@ -365,4 +372,15 @@ function pengembalian()
     $queryUpdateStatus = "UPDATE peminjaman SET status = '3' WHERE id = '$idPeminjaman'";
     mysqli_query($connection, $queryUpdateStatus);
   }
+}
+
+function batalPinjam($Id)
+{
+  global $connection;
+
+  $queryBatalPinjam = "DELETE FROM peminjaman WHERE id = '$Id'
+  ";
+  mysqli_query($connection, $queryBatalPinjam);
+
+  return mysqli_affected_rows($connection);
 }

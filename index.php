@@ -34,9 +34,9 @@
 </head>
 
 <body>
-  <div class="header_section">
+  <div class="header">
     <div class="container-full">
-      <n class="navbar navbar-expand-lg navbar-light bg-primary">
+      <n class="navbar navbar-expand-lg navbar-light bg-warning">
         <a class="navbar-brand" href="#page"><img src="images/logo2.png"></a>
         <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -64,7 +64,7 @@
                     </div>
                   </div>
                   <div class="col-sm-6">
-                    <div class="banner_img"><img src="images/logo1.png"></div>
+                    <div class="banner_img"><img src="images/bg1.jpg"></div>
                     <br>
                   </div>
                 </div>
@@ -138,7 +138,7 @@
         }
       </style>
 
-      <div class="alert alert-danger text-center" role="alert">
+      <div class="alert alert-success text-center" role="alert">
         <strong class="font-weight-bold">Jika Anda Ingin Mencari Buku, Maka Diharuskan Login Terlebih Dahulu</strong>
       </div>
 
@@ -260,7 +260,7 @@
   <!-- copyright section start -->
   <div class="copyright_section">
     <div class="container">
-      <p class="copyright_text">2023 All Rights Reserved. Design by <a href="#">perpus.com</a></p>
+      <p class="copyright_text">2023 All Rights Reserved. Design by <a href="#">perpus Merdeka.com</a></p>
     </div>
   </div>
   <!-- copyright section end -->

@@ -67,7 +67,7 @@ body{
   transform: translateY(-50%);
   left: 45px;
   pointer-events: none;
-  color: #666666;
+  color: hsl(234, 100%, 77%);
 }
 .field input:valid ~ label{
   opacity: 0;
@@ -78,7 +78,7 @@ body{
 }
 .forgot-pass a{
   font-size: 16px;
-  color: #3498db;
+  color: hsl(204, 64%, 84%);
   text-decoration: none;
 }
 .forgot-pass:hover a{
@@ -91,7 +91,7 @@ button{
   font-size: 18px;
   line-height: 50px;
   font-weight: 600;
-  background: #dde1e7;
+  background: hsl(216, 65%, 71%);
   border-radius: 25px;
   border: none;
   outline: none;
