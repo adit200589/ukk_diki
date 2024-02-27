@@ -31,6 +31,7 @@ member.nisn AS nisn,
 member.nama AS nama, 
 user.username AS username,
 user.no_telp AS no_telp,
+peminjaman.harga AS harga,
 peminjaman.tgl_pinjam AS tgl_pinjam,
 peminjaman.tgl_kembali AS tgl_kembali,
 peminjaman.status AS status
@@ -70,7 +71,7 @@ WHERE peminjaman.nisn = '$nisn' AND peminjaman.status IN ($statusString)");
   <link rel="stylesheet" href="css2/jquery.mCustomScrollbar.min.css">
   <!-- Tweaks for older IEs-->
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="website icon" type="png" href="../images/logo1.png">
+  <link rel="website icon" type="png" href="../images/p.png">
 </head>
 
 <body id="page-top">
@@ -86,9 +87,9 @@ WHERE peminjaman.nisn = '$nisn' AND peminjaman.status IN ($statusString)");
 
         <!-- Topbar -->
         <div class="header_section">
-          <div class="container-full">
+          <div class="container-fluid">
             <n class="navbar navbar-expand-lg navbar-light bg-primary">
-              <a class="navbar-brand" href="#page"><img src="../images/logo2.png"></a>
+              <a class="navbar-brand" href="#page"><img src="../images/logof.png"></a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -131,7 +132,22 @@ WHERE peminjaman.nisn = '$nisn' AND peminjaman.status IN ($statusString)");
               if ($item['status'] == 0 && !$alertDisplayed) {
             ?>
                 <div class="alert alert-danger" align="center">
-                  <strong>Peringatan!</strong> Silahkan kirim bukti transaksi ke nomor yang tertera jika ingin membaca buku.
+                  <strong>Peringatan!</strong> Jika sudah bayar, Silahkan kirim bukti transaksi ke nomor yang tertera jika ingin membaca buku.
+                </div>
+            <?php
+                $alertDisplayed = true; // Set variabel ini menjadi true agar alert hanya ditampilkan sekali.
+              }
+            endforeach;
+            ?>
+
+            <?php
+            $alertDisplayed = false;
+
+            foreach ($peminjaman as $item) :
+              if ($item['status'] == 1 && !$alertDisplayed) {
+            ?>
+                <div class="alert alert-warning" align="center">
+                  Klik <strong>"Kembalikan"</strong> Jika Sudah Tenggat Pada Waktunya.
                 </div>
             <?php
                 $alertDisplayed = true; // Set variabel ini menjadi true agar alert hanya ditampilkan sekali.
@@ -146,10 +162,10 @@ WHERE peminjaman.nisn = '$nisn' AND peminjaman.status IN ($statusString)");
                     <tr align="center">
                       <th>No</th>
                       <th>Cover</th>
-                      <th>Id Buku</th>
                       <th>Judul Buku</th>
                       <th>Nama Petugas</th>
                       <th>Nomor Petugas</th>
+                      <th>Harga</th>
                       <th>Tgl. Pinjam</th>
                       <th>Tgl. Selesai</th>
                       <th width="100">Action</th>
@@ -158,31 +174,40 @@ WHERE peminjaman.nisn = '$nisn' AND peminjaman.status IN ($statusString)");
                   <tbody>
                     <?php
                     $no = 1; // Nomor urut dimulai dari 1
+                    $totalHarga = 0; // Inisialisasi total harga
+
                     if (isset($peminjaman) && is_array($peminjaman) && count($peminjaman) > 0) {
                       foreach ($peminjaman as $item) :
+                        // Menghapus karakter non-angka seperti "Rp." dan "."
+                        $hargaBuku = floatval(preg_replace("/[^0-9]/", "", $item['harga']));
+                        $totalHarga += $hargaBuku; // Menambahkan harga buku ke total
                     ?>
+
                         <tr>
                           <td align="center"><?php echo $no++ ?></td>
                           <td align="center">
                             <img src="../imgDB/<?= $item['cover']; ?>" alt="" width="70px" height="100px" style="border-radius: 5px;">
                           </td>
-                          <td><?= $item["id_buku"]; ?></td>
                           <td><?= $item["judul"]; ?></td>
                           <td><?= $item["username"]; ?></td>
                           <td><?= $item["no_telp"]; ?></td>
+                          <td><?= $item["harga"]; ?></td>
                           <td><?= $item["tgl_pinjam"]; ?></td>
                           <td><?= $item["tgl_kembali"]; ?></td>
                           <td>
                             <?php
                             if ($item['status'] == '0') {
                               echo '<b class="badge bg-warning">Menunggu Persetujuan</b>';
+                            ?>
+                              <a href="batalPinjam.php?id=<?= $item['peminjaman_id']; ?>" class="btn btn-danger mt-2" style="width:80%;" onclick="return confirm('Anda Yakin Ingin Membatalkannya?');">Batal Pinjam?</a>
+                            <?php
                             } elseif ($item['status'] == '1') {
                             ?>
                               <div>
-                                <a href="bacabuku.php?id_buku=<?= $item['id_buku']; ?>" target="blank" class="btn btn-success mt-1"><i class="fas fa-book-open"></i>Baca Bukunya</a>
+                                <a href="bacabuku.php?id_buku=<?= $item['id_buku']; ?>" target="blank" class="btn btn-success mt-1"><i class="fas fa-book-open"></i>Baca Buku</a>
                               </div>
                               <div>
-                                <a href="kembali.php?id=<?= $item['peminjaman_id']; ?>" class="btn btn-warning mt-1"> Kembalikan</a>
+                                <a href="kembali.php?id=<?= $item['peminjaman_id']; ?>" class="btn btn-warning mt-1" onclick="return confirm('Anda Yakin Ingin Mengembalikannya?');"> Kembalikan</a>
                               </div>
                             <?php
                             }
@@ -197,6 +222,10 @@ WHERE peminjaman.nisn = '$nisn' AND peminjaman.status IN ($statusString)");
                     ?>
                   </tbody>
                 </table>
+              </div>
+              <div class="card-footer">
+                <strong>Total Harga: </strong>
+                Rp. <?= number_format($totalHarga, 0, ',', '.'); ?>
               </div>
             </div>
           </div>
