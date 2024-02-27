@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Feb 2024 pada 03.12
+-- Waktu pembuatan: 26 Feb 2024 pada 14.37
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.2.12
 
@@ -94,7 +94,8 @@ CREATE TABLE `member` (
 --
 
 INSERT INTO `member` (`nisn`, `nama`, `password`, `kelas`, `jurusan`, `alamat`) VALUES
-(123, 'diki', '123', '12', 'Rekayasa Perangkat Lunak', 'Depok');
+(123, 'diki', '123', '12', 'Rekayasa Perangkat Lunak', 'Depok'),
+(212210055, 'diki', '123', '12', 'Rekayasa Perangkat Lunak', 'Depok');
 
 -- --------------------------------------------------------
 
@@ -182,13 +183,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT untuk tabel `member`
 --
 ALTER TABLE `member`
-  MODIFY `nisn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12346;
+  MODIFY `nisn` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=212210056;
 
 --
 -- AUTO_INCREMENT untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

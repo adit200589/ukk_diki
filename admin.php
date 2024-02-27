@@ -68,7 +68,11 @@ $connect->close();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="icon" type="png" href="images/p.png">
 </head>
-
+<style>
+    body{
+        background-image: url(assets/bg-batik.png);
+    }
+    </style>
 <body>
   <div class="content">
     <div class="text">

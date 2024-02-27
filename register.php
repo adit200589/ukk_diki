@@ -25,13 +25,16 @@ if (isset($_POST["signUp"])) {
     <link rel="stylesheet" href="js_css/style.css">
     <link rel="website icon" type="png" href="images/p.png">
 </head>
-
+<style>
+    body{
+        background-image: url(assets/th.jpg);
+    }
+    </style>
 <body>
     <section class="container">
         <div class="login-container" style="width: 35.2rem;">
             <div class="circle circle-one"></div>
             <div class="form-container">
-                <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" style="width: 65%;" />
                 <h1 class="Bold">REGISTER</h1>
                 <form action="" method="POST">
                     <div style="display: flex; gap: 50px;">

@@ -36,7 +36,11 @@ $connect->close();
     <link rel="stylesheet" href="js_css/style.css">
     <link rel="website icon" type="png" href="images/p.png">
 </head>
-
+<style>
+    body{
+        background-image: url(assets/perpus.jpeg);
+    }
+    </style>
 <body>
     <!-- partial:index.partial.html -->
 
@@ -45,7 +49,6 @@ $connect->close();
             <div class="login-container">
                 <div class="circle circle-one"></div>
                 <div class="form-container">
-                    <img src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png" alt="illustration" class="illustration" />
                     <h1 class="Bold">LOGIN</h1>
                     <form action="" method="POST">
                         <!-- <input type="text" name="nama" placeholder="MASUKAN USERNAME" /> -->
