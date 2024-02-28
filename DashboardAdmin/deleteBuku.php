@@ -9,7 +9,7 @@ if(deleteBuku($bukuId) > 0) {
     </script>";
   }else {
     echo "<script>
-    alert('Buku gagal dihapus!');
+    alert('Buku gagal dihapus, Karena Sedang Dibaca!');
     document.location.href = 'buku.php';
     </script>";
 }

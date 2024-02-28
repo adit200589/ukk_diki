@@ -244,10 +244,6 @@ username LIKE '%$keyword%'
 function deleteBuku($bukuId)
 {
   global $connection;
-  $queryDeletePeminjaman = "DELETE FROM peminjaman WHERE id_buku = '$bukuId'
-  ";
-  mysqli_query($connection, $queryDeletePeminjaman);
-
   $queryDeleteBuku = "DELETE FROM buku WHERE id_buku = '$bukuId'
   ";
   mysqli_query($connection, $queryDeleteBuku);
